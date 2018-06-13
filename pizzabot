@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+	input = InputFormatter.new(ARGV[0])
+	puts Pizzabot.new.delivery_instructions(input.grid, input.drops).join
