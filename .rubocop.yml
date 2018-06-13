@@ -1,0 +1,5 @@
+Style/Tab:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
