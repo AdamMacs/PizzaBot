@@ -1,9 +1,10 @@
-Class Point
+class Point
   attr_accessor :long, :lat
   
-  def initialize(long: 0, lat: 0)
-  @long =  long
-  @lat = lat
+  def initialize(long, lat)
+    @long =  long
+    @lat = lat
   end
+end
   
 

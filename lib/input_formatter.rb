@@ -1,15 +1,16 @@
-Class InputFormatter
-  attr_reader :grid, :drops
+class InputFormatter
+	require_relative 'point.rb'
+	attr_reader :grid, :drops
   
   def initialize(input)
-  @grid = format_grid
+  @grid = format_input(input)
   @drops = format_drops(input)
   end 
   
   def format_input(input)
   	grid_size_array = input.scan(/\d\w\d/).first.split("x")
-	max_long,max_lat = grid_size_array[0].to_i,grid_size_array[1].to_i
-	Point.new(max_long,max_lat)
+		max_long,max_lat = grid_size_array[0].to_i,grid_size_array[1].to_i
+		Point.new(max_long,max_lat)
   end
   
   def format_drops(input)
@@ -22,4 +23,4 @@ Class InputFormatter
     	end
     	drops
 	end
-  
+end
