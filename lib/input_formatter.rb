@@ -19,9 +19,9 @@ class InputFormatter
     drop_offs = input.scan(/-?\d+,\s?-?\d+/)
     raise ArgumentError, 'You need to pass in numbers for the delivery coordinates' unless drop_offs.any?
     drop_offs.each do |drop_off|
-      long = drop_off.split(',').first
-      lat = drop_off.split(',').last
-      drops << Point.new(long.to_i, lat.to_i)
+      long = drop_off.split(',').first.to_i
+      lat = drop_off.split(',').last.to_i
+      drops << Point.new(long, lat)
     end
     drops
   end
