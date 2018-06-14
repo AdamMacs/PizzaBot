@@ -7,14 +7,14 @@ class Pizzabot
 	NORTH = 'N'.freeze
 	SOUTH = 'S'.freeze
 
-	def initialize(route: [])
-		@route = route
+	def initialize
+		@route = []
 	end
 
 	def delivery_instructions(area, drops)
 		start = Point.new(0, 0)
 		drops.each do |drop|
-			return 'Cant drop outside route' unless valid_drop?(area, drop)
+			return 'Cant drop outside route' unless drop.valid_drop?(area)
 			deliver(start, drop)
 			@route << DROP
 			start = drop
@@ -39,9 +39,5 @@ class Pizzabot
 
 	def format_delivery(direction, num)
 		direction * num
-	end
-
-	def valid_drop?(area, drop)
-		area.lat >= drop.lat && area.long >= drop.long
 	end
 end

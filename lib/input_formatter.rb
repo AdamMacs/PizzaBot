@@ -2,7 +2,7 @@ class InputFormatter
   require_relative 'point.rb'
   attr_reader :grid, :drops
 
-  def initialize(input)
+  def initialize(input='')
     @grid = format_input(input)
     @drops = format_drops(input)
   end
