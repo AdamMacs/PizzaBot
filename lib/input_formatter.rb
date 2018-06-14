@@ -8,7 +8,9 @@ class InputFormatter
   end
 
   def format_input(input)
-    grid_size_array = input.scan(/\d\w\d/).first.split('x')
+    grid_size_array = input.scan(/\d\w\d/)
+    raise ArgumentError, 'You need to pass in numbers for the grid max coordinates' unless grid_size_array.any?
+    grid_size_array = grid_size_array.first.split('x')
     max_long = grid_size_array[0].to_i
     max_lat = grid_size_array[1].to_i
     Point.new(max_long, max_lat)
