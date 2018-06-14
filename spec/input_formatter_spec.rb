@@ -26,5 +26,10 @@ context InputFormatter do
       test_input = InputFormatter.new(input)
       expect( test_input.drops.length).to eq(2)
     end
+    it 'excluding bad input' do
+      input =  "5x6 (1, 3) (b, 4)"
+      test_input = InputFormatter.new(input)
+      expect( test_input.drops.length).to eq(1)
+    end
   end
 end
