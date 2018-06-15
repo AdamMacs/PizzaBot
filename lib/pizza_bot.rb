@@ -1,5 +1,4 @@
 # create pizza robot to make delicious deliveries
-# frozen_string_literal: true.
 class Pizzabot
 	DROP = 'D'.freeze
 	EAST = 'E'.freeze
