@@ -3,9 +3,11 @@ To run pizza bot open the tar file or just clone the repo at https://github.com/
 
 cd into your directory where you have cloned the repo
 
-bundle install
+Install ruby 2.4.2 and the bundler gem
 
-when in the root of the directory type ./pizzabot "5x5 (1, 3) (4, 4)"
+Bundle Install
+
+When in the root of the directory type ./pizzabot "5x5 (1, 3) (4, 4)"
 
 I have added some tests using Rspec 
 
