@@ -25,8 +25,8 @@ class Pizzabot
 		private
 
 	def deliver(start, drop)
-		find_long_diff(start.long, drop.long)
 		find_lat_diff(start.lat, drop.lat)
+		find_long_diff(start.long, drop.long)
 	end
 
 	def find_lat_diff(start, drop)
