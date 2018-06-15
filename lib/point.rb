@@ -1,12 +1,12 @@
 class Point
   attr_accessor :lat, :long
 
-  def initialize(lat, long)
-    @lat = lat
+  def initialize(long, lat)
     @long = long
+    @lat = lat
   end
 
   def valid_drop?(area)
-    area.lat >= @lat && area.long >= @long
+    area.long >= @long && area.lat >= @lat
   end
 end
