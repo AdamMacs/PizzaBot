@@ -13,8 +13,6 @@ I have added some tests using Rspec
 
 To run these type :
 
-bundle
-
 rspec
 
 Or alternatively you can run the Rake task to run specs:
