@@ -19,5 +19,9 @@ context DeliveryRoute do
     it 'raises error that the coordinate is out of bounds' do
       expect { dr3.prepare_route }.to raise_error(ArgumentError).with_message('Coord out of grid bounds')
     end
+    dr4 = DeliveryRoute.new('5x6 (3, 3) (4, 4)')
+    it 'sh' do
+      expect(dr4.prepare_route).to eq([[0,0], [3,3], [4,4]])
+    end
   end
 end
