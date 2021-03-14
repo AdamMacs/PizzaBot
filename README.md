@@ -3,7 +3,7 @@ To run pizza bot open the tar file or just clone the repo at https://github.com/
 
 cd into your directory where you have cloned the repo
 
-Install ruby 2.4.2 and the bundler gem "gem install bundler"
+Install ruby 2.6.6 and the bundler gem "gem install bundler"
 
 Then type "bundle install"
 
