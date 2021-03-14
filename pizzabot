@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
-	require_relative 'lib/input_formatter.rb'
-	require_relative 'lib/pizza_bot.rb'
+require_relative 'lib/pizza_bot.rb'
 
-	input = InputFormatter.new(ARGV[0])
-  puts input.error.empty? ? Pizzabot.new.delivery_instructions(input.grid, input.drops) : input.error
+bot = PizzaBot.new(ARGV[0]).deliver
+puts bot.instructions

@@ -1,6 +1,6 @@
-ruby '2.4.2'
+ruby '2.6.6'
 source 'https://rubygems.org'
 
 gem 'rspec'
-gem 'rubocop', require: false
 gem 'rake'
+gem 'rack-test'
