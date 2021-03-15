@@ -24,6 +24,17 @@ class DeliveryRoute
     raise ArgumentError, "Unable to find grid info from input string" unless area
   end
 
+  def validate_route
+    @coords.map! do |address|
+      coords = address.split(/,\s?/).map(&:to_i)
+      contains_negatives(coords)
+      valid_coordinates(coords)
+      out_of_bounds(coords)
+      coords
+    end
+    @coords.unshift([0,0])
+  end
+
   def contains_negatives(coords)
     raise ArgumentError, "Coordinates cannot contain negatives" if coords.any?{|x| x.negative? }
   end
@@ -34,16 +45,5 @@ class DeliveryRoute
 
   def out_of_bounds(coords)
     raise ArgumentError, "Coord out of grid bounds" if coords[0] > area[0] || coords[1] > area[1]
-  end
-
-  def validate_route
-    @coords.map! do |address|
-      coords = address.split(/,\s?/).map(&:to_i)
-      contains_negatives(coords)
-      valid_coordinates(coords)
-      out_of_bounds(coords)
-      coords
-    end
-    @coords.unshift([0,0])
   end
 end

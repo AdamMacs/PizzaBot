@@ -21,7 +21,7 @@ class PizzaBot
         travel(start, finish)
         drop
     end
-    return self
+    self
   end
 
   def travel(start, finish)
